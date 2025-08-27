@@ -1,0 +1,43 @@
+/*reseteo*/
+*{
+    margin: 0; /*los margenes y los espacios predeterminados son eliminados*/
+    padding: 0;
+}
+
+/* selector de etiqueta*/
+body { 
+    background-color: aqua;
+}
+/* SELECTOR DE CLASE si quiero seleccionar una clase debe utilizarse un SELECTOR DE CLASE*/
+.contenedor{
+    width: 900px;   /*el ancho del cuadrado*/
+    background-color: white;
+    margin: auto;
+}
+.span{
+    background-color: orange;
+}
+.rojo{
+    background-color: red;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+/* SELECTOR DE IDENTIDAD*/
+#unico{
+    background-color: green;
+
+}
+.contenido{
+    border: 1px solid #000;
+
+}
+/* este es un selector compuesto se leen de derecha a izquierda, siempre y cuando este dentro de la clase llamada*/
+.contenido h2{
+    background-color: red;
+
+}
+/* anidacion de selector*/
+main .sandbox .contenido h2{
+
+}
