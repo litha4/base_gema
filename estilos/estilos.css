@@ -1,19 +1,70 @@
-/*reseteo*/
+:root{
+    /*AQUI SE ESTABLECEN VARIABLES CON ALCANCE TOTAL*/
+    --azul:#090085;
+    --azul-pastel:#7EA5FF;
+    --verde-limon:#E5FA6E;
+    --crema:#FFFFEF;
+    --plomo:#EBEDEC;
+    --padding-1:14px;
+    --padding-2:50px;
+    --gap-1:20px;
+
+}
+
+
+/*reseteo (*)*/
 *{
     margin: 0; /*los margenes y los espacios predeterminados son eliminados*/
     padding: 0;
+    box-sizing:border-box;
 }
 
 /* selector de etiqueta*/
 body { 
-    background-color: aqua;
+    background-color:var(--azul);
 }
 /* SELECTOR DE CLASE si quiero seleccionar una clase debe utilizarse un SELECTOR DE CLASE*/
 .contenedor{
     width: 900px;   /*el ancho del cuadrado*/
     background-color: white;
     margin: auto;
+   /* padding:60px;*/
 }
+header {
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--azul-pastel);
+    color:var(--crema);
+    padding:var(--padding-1);
+
+}
+header h1 a{
+    color: var(--crema);
+    text-decoration: none;
+}
+header nav{}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap:var(--gap-1)
+
+
+}
+header nav ul li{}
+header nav ul li a{
+    color:var(--crema);
+    text-decoration: none;
+    display: block;
+    padding: var(--padding-1);
+    border-radius: 4px;
+
+
+}
+header nav ul li a:hover{
+    background-color: var(--azul);
+
+}
+/*FIN DEL HEADER*/
 .span{
     background-color: orange;
 }
@@ -29,15 +80,124 @@ body {
 
 }
 .contenido{
-    border: 1px solid #000;
+    /*border: 3px solid #000;*/
+    border-bottom: 10px dashed rgb(187, 44, 681);
+    border-top: 5px double pink;
+    border-left: 10px dotted rgba(3, 105, 3, 0.4);
+    border-right: 3px solid blue;
+    border-radius: 5px;
+    border-top-right-radius: 100px;
+    background-color: bisque;
+    box-shadow: 10px -15px 50px rgba(124, 122, 122, 0.7);
+    /*outline: 20px solid yellowgreen;*/
+    /* los valores en css pueden ser relativos o absolutos*/
+    width: 600px; /* ancho : valor absoluto 600, un valor relativo seria por ejemplo 60%*/
+    height: auto;
+   /* margin-top: 40px;
+    margin-bottom: 40px;*/
+    /*margin: 40px 40px 10px 50px;*/
+    margin: 0 auto; /* manera de centrar bloques*/
+    padding: 40px;
+    
 
 }
 /* este es un selector compuesto se leen de derecha a izquierda, siempre y cuando este dentro de la clase llamada*/
 .contenido h2{
     background-color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
 
 }
-/* anidacion de selector*/
-main .sandbox .contenido h2{
+.contenido p{
 
+    margin: 0 20px 20px 60px;
+}
+.contenido a{
+    background-color: rgba(27, 27, 129, 0.5);
+    border-radius: 100px;
+    color: rgb(176, 248, 224);
+    cursor: pointer;
+    display:block;
+    padding: 8px 20px;
+    text-align: center;
+    
+    margin-right: 50px;
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 250px;
+    margin:0 auto 20px auto;
+
+}
+/* PSEUDO CLASE:HOVER */
+.contenido a:hover{
+    background-color: green;
+} 
+.contenido .ejemplo{ /*ejemplo es el padre y la regla felx se lo aplica a este para que el resto se ordene*/
+    padding: 10px;
+    border: 1px solid black;
+    display: flex; /*va en el padre*/
+    flex-direction:row;
+    justify-content: space-around;
+
+
+}
+.contenido .ejemplo div{
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+    background: blueviolet;
+    border:1px solid black;
+    color: azure;
+    text-align: center;
+    padding-top: 40px;
+
+}
+.ejemplo div:nth-child(2){
+    flex-grow: 2;
+}
+.ejemplo div:nth-child(3){
+    flex-grow: 4;
+}
+
+/* anidacion de selector*/
+/*padding:60px*/
+/*INICIO DEL FOOTER*/
+footer{
+    display:flex;
+    justify-content: space-around;
+    background-color: var(--azul-pastel);
+    color:var(--crema);
+    padding:var(--padding-2) var(--padding-1);
+    /*border-radius: 10px;*/
+
+}
+footer p {
+    text-decoration: none;
+    color: var(--azul);
+
+}
+footer nav{}
+footer nav ul{
+    display: flex;
+    list-style: none;
+    gap: var(--gap-1)
+
+    
+}
+footer nav ul li{
+    color:var(--plomo);
+    text-decoration: none;
+    display: block;
+}
+footer nav ul li a{
+    color: var(--plomo);
+    text-decoration: none;
+    padding: var(--padding-2);
+    border-radius: 50px;
+}
+footer nav ul li a:hover{
+    background-color: var(--azul);
 }
