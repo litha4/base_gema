@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root{
     /*AQUI SE ESTABLECEN VARIABLES CON ALCANCE TOTAL*/
     --azul:#090085;
@@ -8,6 +10,19 @@
     --padding-1:14px;
     --padding-2:50px;
     --gap-1:20px;
+    /*Escala tipografica*/
+    --h1:19.20px;
+    --h2:23.04px;
+    --h3:27.65px;
+    --h4:33.18px;
+    --h5:39.81px;
+    --h6:47.78px;
+    --p:16px;
+    --sm:13.33px;
+    --xsm:11.11px;
+
+    --serif:"Judson","serif";
+
 
 }
 
@@ -18,15 +33,85 @@
     padding: 0;
     box-sizing:border-box;
 }
+/*@font-face {
+    font-family: "Jomolhari", serif ;NO ES NECESARIO
+    src: url("fonts/");
+}*/
 
 /* selector de etiqueta*/
 body { 
     background-color:var(--azul);
+    font-family: "Judson", serif;
+    
+
 }
+/*SON SELECTORES PARA CADA ETIQUETA*/
+h1{
+    /* H6 gema3 */
+    font-family: var(--serif);
+    font-size: var(--h1);
+    font-weight: 400;
+    
+}
+h2{
+    font-family: var(--serif);
+    font-size: var(--h2);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h3{
+    font-family: var(--serif);
+    font-size: var(--h3);
+    font-weight: 400;
+}
+h4{
+    font-family: var(--serif);
+    font-size: var(--h4);
+    font-weight: 400;
+}
+h5{
+    font-family: var(--serif);
+    font-size: var(--h5);
+    font-weight: 400;
+}
+h6{
+    font-family: var(--serif);
+    font-size: var(--h6);
+    font-weight: 400;
+}
+p{
+    font-family: var(--serif);
+    font-size: var(--p);
+    font-weight: 400;
+}
+
+
+.sm{
+    font-family: var(--serif);
+    font-size: var(--sm);
+    font-weight: 400;
+} 
+.xsm{
+    font-family: var(--serif);
+    font-size: var(--xsm);
+    font-weight: 400;
+}
+.italic{
+    font-style: italic;
+}
+.bold{
+     /* H3 gema3 bold*/
+   
+    font-weight: 700;
+
+}
+
+
+
 /* SELECTOR DE CLASE si quiero seleccionar una clase debe utilizarse un SELECTOR DE CLASE*/
 .contenedor{
     width: 900px;   /*el ancho del cuadrado*/
-    background-color: white;
+    background-color: var(--plomo);
     margin: auto;
    /* padding:60px;*/
 }
@@ -79,6 +164,48 @@ header nav ul li a:hover{
     background-color: green;
 
 }
+/*CONTENIDO DE INDEX MODIFICADO*/
+/*HERO*/
+
+/*PARA MANEJAR EL TAMANO DE LA IMAGEN
+.hero img{
+    display: block;
+    width: 100%;
+}*/
+/*Posiciones
+STATIC
+RELATIVE esta posicionado desde e contenido
+ABSOLUTE esta posicionado desde la ventana(TIENE UNA RELACION CON EL FLUJO NORMAL SI SU PADRE ES DE POSICION RELATIVA)
+FIXED esta fijo a pesar del scroll es (x),depende de la pantalla
+
+para mover el objeto
+TOP - LEFT - BOTTOM - RIGHT
+*/
+.hero{
+    position: relative;
+    /*top:100px;
+    left:100px;
+    */
+
+}
+.hero p{
+    width: 300px;
+    padding: var(--padding-1);
+    background-color: var(--verde-limon);
+    font-size: var(--h2);
+    position: absolute;
+    z-index: 9999;/*en que orden de profundidad se presentara el elemento, el valor 9999 se superpone a distintos elementos*/
+    
+    left: var(--padding-2);
+    bottom: var(--padding-2);
+
+}
+
+
+
+
+
+/*CONTENIDO DE IDEAS TRABAJADO*/
 .contenido{
     /*border: 3px solid #000;*/
     border-bottom: 10px dashed rgb(187, 44, 681);
