@@ -7,9 +7,15 @@
     --verde-limon:#E5FA6E;
     --crema:#FFFFEF;
     --plomo:#EBEDEC;
+
     --padding-1:14px;
-    --padding-2:50px;
+    --padding-2:50px; 
+    --padding_6:42px;   /*3*padding_1*/
+    --padding_3:30px;
+    --padding_4:56px;   /*4*padding_1*/
+    --padding_5:70;     /*5*padding_1*/
     --gap-1:20px;
+
     /*Escala tipografica*/
     --h1:19.20px;
     --h2:23.04px;
@@ -22,6 +28,8 @@
     --xsm:11.11px;
 
     --serif:"Judson","serif";
+
+    
 
 
 }
@@ -45,7 +53,7 @@ body {
     
 
 }
-/*SON SELECTORES PARA CADA ETIQUETA*/
+/*SON SELECTORES PARA CADA ETIQUETA DE TIPOGRAFIAS*/
 h1{
     /* H6 gema3 */
     font-family: var(--serif);
@@ -110,11 +118,82 @@ p{
 
 /* SELECTOR DE CLASE si quiero seleccionar una clase debe utilizarse un SELECTOR DE CLASE*/
 .contenedor{
-    width: 900px;   /*el ancho del cuadrado*/
+    width: 1920px;   /*el ancho del cuadrado*/
     background-color: var(--plomo);
     margin: auto;
    /* padding:60px;*/
 }
+
+/*MODULARIZACIÓN DE CSS*/
+
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-1);
+}
+
+.wrap{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    border: 1px solid var(--azul-pastel);
+    padding: var(--padding-1);
+}
+
+.espacio_bloques{
+    margin-bottom: var(--padding-2);
+}
+.interno_bloques{
+    padding: var(--padding-2);
+}
+
+img{
+    display: block;
+    background-color: var(--crema);
+    width: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    margin-bottom: var(--padding-1);
+}
+.redondeo{
+    border-radius: var(--padding_3);
+}
+
+.ocultar{
+    overflow: hidden;
+
+}
+
+.absoluto{
+    position: absolute;
+
+}
+.relativo{
+    position: relative;
+}
+
+.btn{
+    display: block;
+    font-size: var(--p);
+    text-decoration: none;
+    padding: var(--padding-1) var(--padding-2);
+    background-color: var(--azul);
+    color: var(--crema);
+    border-radius:var(--padding_4);
+    margin: var(--padding-1) auto;
+    text-align: center;
+    max-width: 300px;
+    transition: 300ms all;
+
+}
+.btn:hover{
+    background-color: var(--azul-pastel);
+}
+
+/*CIERRRE DE MODULARIZACIÓN*/
+
 header {
     display:flex;
     justify-content: space-between;
@@ -205,8 +284,8 @@ TOP - LEFT - BOTTOM - RIGHT
 
 
 
+.sandbox.contenido{
 /*CONTENIDO DE IDEAS TRABAJADO*/
-.contenido{
     /*border: 3px solid #000;*/
     border-bottom: 10px dashed rgb(187, 44, 681);
     border-top: 5px double pink;
@@ -229,18 +308,18 @@ TOP - LEFT - BOTTOM - RIGHT
 
 }
 /* este es un selector compuesto se leen de derecha a izquierda, siempre y cuando este dentro de la clase llamada*/
-.contenido h2{
+.sandbox.contenido h2{
     background-color: red;
     margin-top: 20px;
     margin-bottom: 20px;
    
 
 }
-.contenido p{
+.sandbox.contenido p{
 
     margin: 0 20px 20px 60px;
 }
-.contenido a{
+.sandbox.contenido a{
     background-color: rgba(27, 27, 129, 0.5);
     border-radius: 100px;
     color: rgb(176, 248, 224);
@@ -259,10 +338,10 @@ TOP - LEFT - BOTTOM - RIGHT
 
 }
 /* PSEUDO CLASE:HOVER */
-.contenido a:hover{
+.sandbox.contenido a:hover{
     background-color: green;
 } 
-.contenido .ejemplo{ /*ejemplo es el padre y la regla felx se lo aplica a este para que el resto se ordene*/
+.sandbox.contenido .ejemplo{ /*ejemplo es el padre y la regla felx se lo aplica a este para que el resto se ordene*/
     padding: 10px;
     border: 1px solid black;
     display: flex; /*va en el padre*/
@@ -271,7 +350,7 @@ TOP - LEFT - BOTTOM - RIGHT
 
 
 }
-.contenido .ejemplo div{
+.sandbox.contenido .ejemplo div{
     flex-grow: 1;
     width: 100px;
     height: 100px;
